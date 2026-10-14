@@ -1,0 +1,5 @@
+# Versiones comunes para Python 3.10 a 3.14.
+# NetworkX es un recurso opcional para los ejercicios que lo requieran.
+# La version 3.4.2 conserva la compatibilidad con Ubuntu 22.04 (Python 3.10).
+jupyterlab==4.6.4
+networkx==3.4.2

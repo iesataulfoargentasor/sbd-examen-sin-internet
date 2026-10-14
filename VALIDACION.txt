@@ -1,0 +1,45 @@
+VALIDACION DEL PAQUETE - 14/10/2026
+=================================
+
+Comprobado en la version inicial en Windows con CPython 3.12.14,
+en una ruta con espacios:
+- Creacion real de un entorno virtual separado.
+- Descarga e instalacion de JupyterLab 4.6.4 y NetworkX 3.4.2.
+- pip check sin dependencias incompatibles.
+- Registro del kernel sbd exclusivamente dentro del entorno.
+- Arranque de un kernel real, calculo de centralidad y lectura/escritura CSV.
+- Ejecucion del acceso INSTALAR_WINDOWS.cmd sobre la instalacion existente:
+  comprueba el entorno y no vuelve a descargar paquetes.
+- Ejecucion completa de 00_Prueba_entorno.ipynb con su kernel y creacion del CSV.
+- Arranque del servidor local mediante iniciar.py, respuesta de JupyterLab,
+  acceso al cuaderno y comprobacion de que el kernel ofrecido es sbd.
+- Cierre del servidor de prueba.
+
+Revision para la publicacion en GitHub:
+- README detallado e instrucciones ajustadas al enunciado de cada examen.
+- Cuaderno de prueba simplificado a Python basico, sin NetworkX ni CSV.
+  Sus celdas se han ejecutado con Python 3.12 y dan el resultado 60 y el
+  mensaje PRUEBA CORRECTA. No crean archivos adicionales.
+- El comprobador automatico conserva la comprobacion de bibliotecas y kernel;
+  sustituye la escritura temporal CSV por una lectura y escritura de texto.
+  El mecanismo de instalacion y registro del kernel se conserva.
+- Revision sintactica de los programas de Python y de los scripts Bash.
+
+Comprobado para Ubuntu:
+- Sintaxis Bash correcta de los tres scripts.
+- Revision de la deteccion de python3 y de la falta de python3-venv.
+No se ha ejecutado la instalacion completa en Ubuntu 22.04: el entorno Linux
+disponible para las pruebas no pudo arrancar. Debe realizarse la prueba del
+cuaderno en un Ubuntu 22.04 real antes de distribuirlo a todo el grupo.
+
+Documentacion y empaquetado:
+- Guia PDF de tres paginas renderizada y revisada visualmente.
+- Cuaderno de prueba valido y sin respuestas del examen.
+- El ZIP contiene los scripts y documentos, sin .venv, registros ni descargas.
+
+Limites:
+- Las pruebas funcionales se realizaron con Python 3.12 en Windows, no con
+  todas las versiones de Python admitidas por el instalador.
+- No se desconecto fisicamente la red del equipo de pruebas. La guia pide
+  cerrar, desconectar Internet y volver a abrir el cuaderno en cada portatil.
+- La preparacion inicial necesita Internet. No es un instalador sin conexion.

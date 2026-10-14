@@ -1,0 +1,44 @@
+EXAMEN SBD SIN INTERNET
+======================
+
+1. Extrae TODO el ZIP en una carpeta local donde puedas escribir.
+   No ejecutes los archivos desde dentro del ZIP. Conserva la carpeta en
+   esa ubicacion despues de instalar. Lee README.md o GUIA_ALUMNADO.pdf.
+
+2. ANTES DEL EXAMEN, CON INTERNET
+   Windows 11: doble clic en INSTALAR_WINDOWS.cmd.
+   Ubuntu 22.04: abre una terminal en esta carpeta y escribe:
+       bash INSTALAR_UBUNTU.sh
+   Espera el mensaje INSTALACION COMPLETADA o COMPROBACION CORRECTA.
+
+3. PRUEBA SIN INTERNET
+   Desconecta Wi-Fi y cualquier cable de red. Inicia JupyterLab:
+   Windows: doble clic en INICIAR_EXAMEN_WINDOWS.cmd.
+   Ubuntu:  bash INICIAR_EXAMEN_UBUNTU.sh
+   Abre 00_Prueba_entorno.ipynb, ejecuta sus celdas y guarda.
+
+4. EL DIA DEL EXAMEN
+   Copia el cuaderno entregado por el docente dentro de trabajo.
+   Usa INICIAR_EXAMEN, selecciona Python (SBD sin Internet) si se pregunta
+   y trabaja normalmente. Entrega el .ipynb y los archivos que pida el docente.
+   No entregues .venv ni .estado. No necesitas Colab ni una cuenta Google.
+
+REQUISITOS
+   CPython 3.10 a 3.14 ya instalado y un navegador reciente.
+   Windows: se recomienda Python 3.14; si solo tienes 3.15, instala 3.14
+   adicionalmente. El instalador no descarga ni reemplaza Python.
+   Ubuntu 22.04: sirve Python 3.10. Si falta venv, con Internet ejecuta:
+       sudo apt update
+       sudo apt install python3-venv
+   Solo este paso opcional instala un paquete del sistema y pide permisos
+   de administrador. El instalador del examen se ejecuta SIN sudo.
+
+Los paquetes del examen se guardan en .venv y su configuracion en .estado.
+NetworkX esta preinstalado como recurso opcional. Solo debes utilizarlo,
+dibujar grafos o exportar CSV cuando lo pida expresamente el enunciado.
+El cuaderno de prueba solo usa Python basico; no exige grafos ni CSV.
+La primera instalacion descarga paquetes. Este ZIP no incluye sus instaladores
+sin conexion: debe prepararse antes del examen. Iniciar y comprobar no descargan.
+
+Si ocurre un error, conserva el mensaje y .estado/instalacion.log para el docente.
+No borres trabajo: contiene tus cuadernos y resultados.

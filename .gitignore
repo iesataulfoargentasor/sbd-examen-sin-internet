@@ -1,0 +1,9 @@
+.venv*/
+.estado/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+trabajo/*
+!trabajo/00_Prueba_entorno.ipynb

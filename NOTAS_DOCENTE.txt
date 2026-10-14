@@ -1,0 +1,72 @@
+PAQUETE DE PREPARACION DEL EXAMEN SBD
+===================================
+
+ALCANCE
+Incluye instaladores para Windows 11 y Ubuntu 22.04, accesos de inicio,
+comprobadores sin conexion, guia del alumnado y un cuaderno de prueba.
+No incluye el enunciado ni el cuaderno resuelto del proyecto. Distribuya el
+examen o su plantilla al comenzar la prueba y pidales copiarlo a trabajo.
+El cuaderno de prueba usa otros datos y solo comprueba el entorno.
+El README.md incluye las instrucciones detalladas para el alumnado.
+La prueba basica solo usa Python: no genera CSV ni utiliza NetworkX.
+NetworkX sigue instalado como recurso opcional, sin imponerlo en la evaluacion.
+El uso de grafos y la entrega de CSV dependen exclusivamente del enunciado.
+
+VERSIONES
+JupyterLab 4.6.4 y NetworkX 3.4.2 estan fijados en requirements.txt.
+Se conserva NetworkX 3.4.2 para admitir el Python 3.10 de Ubuntu 22.04.
+El paquete acepta CPython 3.10 a 3.14. Python 3.15 y otras implementaciones
+quedan fuera de esta preparacion; el instalador muestra una indicacion.
+En Windows se recomienda CPython 3.14, instalado para el usuario con su
+lanzador py. Puede coexistir con otras versiones.
+Las dependencias indirectas compatibles se resuelven al instalar; su lista
+queda en .estado/versiones_instaladas.txt y puede variar entre sistemas.
+Las versiones principales iguales no implican igualdad de todos los paquetes.
+
+INSTALACION Y AISLAMIENTO
+La preparacion necesita Internet para descargar de PyPI. No se descargan
+ejecutables de Python ni se modifica el PATH permanente del equipo.
+Los paquetes se instalan usando exclusivamente el Python de .venv.
+El kernel sbd se registra dentro del entorno, sin registro global o de usuario.
+Las preferencias, temporales y archivos de ejecucion se dirigen a .estado.
+Los cuadernos y los CSV se guardan en trabajo. venv depende del Python base:
+no lo desinstale y no mueva ni copie el entorno una vez creado.
+No es una maquina virtual ni un aislamiento de permisos del sistema operativo.
+Si falta python3-venv en Ubuntu, su instalacion mediante apt es un requisito
+del sistema, requiere administrador y se realiza antes, fuera del instalador.
+No ejecute INSTALAR_UBUNTU.sh con sudo.
+
+Los scripts no ejecutan instalaciones durante INICIAR_EXAMEN o COMPROBAR.
+El servidor escucha en 127.0.0.1 y mantiene la autenticacion predeterminada.
+Se limita la seleccion al kernel sbd y se desactivan las comprobaciones de
+actualizacion de JupyterLab. No se instalan extensiones de IA.
+Este paquete no bloquea Internet ni controla otras aplicaciones. La desconexion
+de red y las normas de la evaluacion deben gestionarse aparte.
+
+PREPARACION DEL AULA
+1. Distribuya el ZIP con antelacion y haga instalar en la ubicacion definitiva.
+2. Pruebe al menos un Windows 11 y un Ubuntu 22.04 reales. Cada alumno debe
+   ejecutar tambien su prueba. La validacion local del paquete se documenta
+   en VALIDACION.txt; no sustituye la prueba en los portatiles del aula.
+3. Tras instalar, desconecte todas las conexiones de red, cierre JupyterLab
+   y vuelva a iniciarlo. Abra 00_Prueba_entorno.ipynb y ejecute todas las celdas.
+4. Confirme que se puede ejecutar, editar y guardar el cuaderno en trabajo.
+5. Prepare un cuaderno de examen sin soluciones, salidas ni adjuntos que las
+   revelen. Cambie las referencias a Colab por JupyterLab local y retire las
+   instrucciones de instalar paquetes durante el examen.
+6. Especifique los archivos de entrega en el enunciado. No exija CSV ni uso de
+   NetworkX si esos elementos no forman parte de los ejercicios del examen.
+
+RECUPERACION
+Si se interrumpe la descarga, repita el instalador con Internet.
+Si la instalacion completa se ejecuta de nuevo, solo comprueba el entorno.
+Si faltan paquetes o la carpeta se movio: cierre JupyterLab, conserve trabajo,
+renombre .venv a .venv_anterior y vuelva a ejecutar el instalador con conexion.
+No copie una .venv de Windows a Ubuntu ni entre portatiles.
+
+FUENTES TECNICAS
+https://docs.python.org/3/library/venv.html
+https://pypi.org/project/jupyterlab/4.6.4/
+https://pypi.org/project/networkx/3.4.2/
+https://ubuntu.com/developers/docs/reference/availability/python/
+https://jupyterlab.readthedocs.io/en/stable/getting_started/starting.html
